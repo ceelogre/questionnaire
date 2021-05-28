@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twisted</title>
+  </head>
+  <body>
+    <h1>Questionnaire</h1>
+    <h2>Please type to your name to get started</h2>
+    <form name='userFormPage1'>
+      <input type="text" name="filloutName">
+    </form>
+    <a href="ubu.html" id="page-one">Continue</a>
+    <script> 
+      document.getElementById('page-one').addEventListener('click', () => {
+        var nameElt = document.forms.userFormPage1;
+        localStorage.setItem('username',nameElt.elements[0].value)
+      })
+    </script>
+  </body>
+</html>

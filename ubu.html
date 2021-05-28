@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twisted</title>
+  </head>
+  <body>
+    <h1>Questionnaire</h1>
+    <h2>Click next to continue</h2>
+    <form name="userFormPage2">
+      <label for="gender">Gender</label> 
+      <select id='gender'>
+        <option>Female</option>
+        <option>Male</option>
+      </select>
+    </form>
+    <a href="silhouette.html" id="page-two">Continue</a>
+    <script>
+      document.getElementById('page-two').addEventListener('click', () => {
+        var nameElt = document.getElementById('gender')
+        localStorage.setItem('gender',nameElt.options[nameElt.selectedIndex].text)
+      })
+    </script>
+  </body>
+</html>
