@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twisted - Results</title>
+  </head>
+  <body>
+    <h1>Thank you for taking the test</h1>
+    <button onclick="reveal()">Click her to view results</button>
+    <div id='results-box' style="visibility:hidden ;">
+      <p>Name: <span id='name'></span> <br>
+      Gender: <span id='gender'></span><br>
+      Score: <span id='final-score'></span> / 3 </p>
+
+    </div>
+    <div>
+      <a href="questionnaire.html">Re-take the test</a>
+    </div>
+    <script>
+      const reveal = () => {
+
+        document.getElementById('results-box').style.visibility='visible'
+        document.getElementById('name').innerText = localStorage.getItem('name')
+        document.getElementById('gender').innerText = localStorage.getItem('gender')
+        document.getElementById('final-score').innerText = localStorage.getItem('points')
+      }
+    </script>
+  </body>
+</html>
